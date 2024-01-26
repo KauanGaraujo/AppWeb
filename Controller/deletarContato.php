@@ -6,11 +6,11 @@ include_once("../view/header.php");
 extract($_REQUEST,EXTR_OVERWRITE);
  
  
-if(inserirContato($conexao,$nomeContato,$foneContato)){
-echo("As informações do Contato foram salvas");
+if(deletarContato($conexao, $idContato)){
+echo("As informações do Contato foram excluídas com sucesso.");
  
 }else{
-echo("Alerta!!! As informações do Contato Não foram salvas");
+echo("Alerta!!! As informações do Contato Não foram excluídas");
 }
  
 ?>
